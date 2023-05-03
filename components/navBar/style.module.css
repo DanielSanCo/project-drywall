@@ -1,6 +1,6 @@
 .nav {
     width: 100vw;
-    height: 160px;
+    height: 150px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,18 +12,46 @@
 .nav .test {
     background-color: brown;
     width: 100%;
-    height: 80%;
+    min-height: 75%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 .nav .test2 {
     background-color: purple;
     width: 100%;
-    height: 20%;
+    height: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.parceriaArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.socialArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.socialArea .socialItens img {
+    width: 40px;
+    border-radius: 10px;
+}
+.parceirosList {
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.parceirosList div img {
+    width: 18px;
+    margin: 5px;
 }
 .nav .test2 ul {
     display: flex;
@@ -103,11 +131,14 @@
     .mobileMenu {
         display: block;
     }
-    .nav .socialArea {
-        display: none;
-    }
     .navlist {
         display: flex;
+    }
+    .nav .test2 ul {
+        display: none;
+    }
+    .parceriaArea {
+        display: none;
     }
 }
 

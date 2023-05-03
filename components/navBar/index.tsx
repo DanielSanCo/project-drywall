@@ -10,9 +10,14 @@ const navList = [
     { name: 'Contate-me', img: '', link: '/contato' }
 ]
 const socialList = [
-    { name: 'Linkedin', img: '/images/linkedin2.png', link: 'https://www.linkedin.com/in/daniel-santos-corr%C3%AAa-007979217/' },
-    { name: 'Github', img: '/images/github.png', link: 'https://github.com/DanielSanCo' },
-    { name: 'Whatsapp', img: '/images/whatsapp.png', link: 'https://web.whatsapp.com/send?phone=5521969703202' },
+    { name: 'Whatsapp', img: '/images/social/whatsapp.png', link: 'https://web.whatsapp.com/send?phone=5521999999999' },
+]
+
+const parceiros = [
+    { name: '', img: 'https://logodownload.org/wp-content/uploads/2014/04/mcdonalds-logo-1-1.png' },
+    { name: '', img: 'https://logodownload.org/wp-content/uploads/2014/04/mcdonalds-logo-1-1.png' },
+    { name: '', img: 'https://logodownload.org/wp-content/uploads/2014/04/mcdonalds-logo-1-1.png' },
+    { name: '', img: 'https://logodownload.org/wp-content/uploads/2014/04/mcdonalds-logo-1-1.png' },
 ]
 
 const Navbar = () => {
@@ -38,35 +43,58 @@ const Navbar = () => {
         <nav className={styles.nav}>
 
             <div className={styles.test}>
-                <div className={styles.logo}>
-                    <img src="/images/logo/logo.png" alt="" />
-                    <a href='/'><span>D</span>OUTOR<span>D</span>RYWALL</a>
+                <div className={styles.parceriaArea}>
+                    <div>PARCERIAS</div>
+                    <div className={styles.parceirosList}>
+                        {parceiros.map((item, index) => (
+                            <div><img src={item.img} alt="" /></div>
+                        ))}
+                    </div>
+                </div>
+
+                <div className={styles.mobileMenu} onClick={() => (showResponseMenu(), changeAnimModule())}>
+                    <div style={{ transform: buttonAnim }}></div>
+                    <div style={{ opacity: buttonAnim2 }}></div>
+                    <div style={{ transform: buttonAnim3 }}></div>
+                </div>
+
+                <a href='/'>
+                    <div className={styles.logo}>
+                        <img src="/images/logo/logo.png" alt="" />
+                        DOUTOR DRYWALL
+                    </div>
+                </a>
+
+                <div className={styles.socialArea}>
+                    <div>SOCIAL</div>
+                    <div className={styles.socialItens}>
+                        {socialList.map((item, index) => (
+                            <a href={item.link} key={index} target='_blank'>
+                                <img src={item.img} alt={item.name} />
+                            </a>
+                        ))}
+                    </div>
                 </div>
             </div>
 
             <div className={styles.test2}>
                 <ul>
                     {navList.map((item, index) => (
-                        <li key={index}><a href={item.link} style={{ textTransform: 'uppercase', fontWeight: 'bold', fontSize: '12px' }}>{item.name}</a></li>
+                        <li key={index}>
+                            <a href={item.link} style={{ textTransform: 'uppercase', fontWeight: 'bold', fontSize: '12px' }}>
+                                {item.name}
+                            </a>
+                        </li>
                     ))}
                 </ul>
-
             </div>
-            <div className={styles.mobileMenu} onClick={() => (showResponseMenu(), changeAnimModule())}>
-                <div style={{ transform: buttonAnim }}></div>
-                <div style={{ opacity: buttonAnim2 }}></div>
-                <div style={{ transform: buttonAnim3 }}></div>
-            </div>
-            {/*<div className={styles.socialArea}>
-                {socialList.map((item, index) => (
-                    <a href={item.link} key={index} target='_blank'><img src={item.img} alt={item.name} /></a>
-                ))}
-                </div>*/}
-            {/*<div className={styles.navlist} style={{ transform: active }}>
+            <div className={styles.navlist} style={{ transform: active }}>
                 {navList.map((item, index) => (
-                    <div key={index} onClick={() => (showResponseMenu2(), changeAnimModule())} ><a href={item.link} >{item.name}</a></div>
+                    <div key={index} onClick={() => (showResponseMenu2(), changeAnimModule())} >
+                        <a href={item.link} >{item.name}</a>
+                    </div>
                 ))}
-            </div>*/}
+            </div>
         </nav>
     )
 }

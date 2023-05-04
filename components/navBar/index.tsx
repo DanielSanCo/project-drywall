@@ -4,10 +4,10 @@ import { useState } from 'react';
 import styles from './style.module.css';
 
 const navList = [
-    { name: 'Home', img: '', link: '/' },
-    { name: 'Sobre', img: '', link: '/sobre' },
-    { name: 'Tecnologias', img: '', link: '/tecnologias' },
-    { name: 'Contate-me', img: '', link: '/contato' }
+    { name: 'Inicio', img: '', link: '/' },
+    { name: 'Produtos', img: '', link: '/sobre' },
+    { name: 'Parceiros', img: '', link: '/tecnologias' },
+    { name: 'Sobre nós', img: '', link: '/contato' }
 ]
 const socialList = [
     { name: 'Whatsapp', img: '/images/social/whatsapp.png', link: 'https://web.whatsapp.com/send?phone=5521999999999' },
@@ -21,13 +21,13 @@ const parceiros = [
 ]
 
 const Navbar = () => {
-    const [active, setActive] = useState('translateX(100%)');
+    const [active, setActive] = useState('translateX(-100%)');
     const [buttonAnim, setButtonAnim] = useState('');
     const [buttonAnim2, setButtonAnim2] = useState('');
     const [buttonAnim3, setButtonAnim3] = useState('');
 
     const showResponseMenu = () => {
-        active === 'translateX(100%)' ? setActive('translateX(0)') : setActive('translateX(100%)');
+        active === 'translateX(-100%)' ? setActive('translateX(0)') : setActive('translateX(-100%)');
     }
     const changeAnimModule = () => {
         buttonAnim === '' ? setButtonAnim('rotate(-45deg) translate(-8px, 8px)') : setButtonAnim('');
@@ -47,7 +47,7 @@ const Navbar = () => {
                     <div>PARCERIAS</div>
                     <div className={styles.parceirosList}>
                         {parceiros.map((item, index) => (
-                            <div><img src={item.img} alt="" /></div>
+                            <div key={index}><img src={item.img} alt="" /></div>
                         ))}
                     </div>
                 </div>
@@ -58,15 +58,18 @@ const Navbar = () => {
                     <div style={{ transform: buttonAnim3 }}></div>
                 </div>
 
+                <div className={styles.verticalLine}></div>
+
                 <a href='/'>
                     <div className={styles.logo}>
-                        <img src="/images/logo/logo.png" alt="" />
-                        DOUTOR DRYWALL
+                            <img src="/images/logo/logo.png" alt="" />
+                            <div className={styles.logoName}>DOUTOR DRYWALL</div>
                     </div>
                 </a>
 
+                <div className={styles.verticalLine}></div>
+
                 <div className={styles.socialArea}>
-                    <div>SOCIAL</div>
                     <div className={styles.socialItens}>
                         {socialList.map((item, index) => (
                             <a href={item.link} key={index} target='_blank'>
@@ -88,6 +91,7 @@ const Navbar = () => {
                     ))}
                 </ul>
             </div>
+
             <div className={styles.navlist} style={{ transform: active }}>
                 {navList.map((item, index) => (
                     <div key={index} onClick={() => (showResponseMenu2(), changeAnimModule())} >

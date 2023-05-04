@@ -5,6 +5,7 @@
     position: absolute;
     z-index: 2;
     flex-direction: column;
+    top: 0;
 }
 
 .nav .test {
@@ -132,7 +133,7 @@
 }
 
 .verticalLine {
-    height: 150px;
+    height: 20vh;
     width: 1px;
     background-color: antiquewhite;
     display: none;
@@ -140,6 +141,7 @@
 
 @media (max-width: 900px) {
     .nav {
+        height: 20vh;
         position: fixed;
     }
     .nav .test {

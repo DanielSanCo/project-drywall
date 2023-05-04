@@ -1,0 +1,13 @@
+.carrosel {
+    height: 80vh;
+}
+.carrosel img {
+    margin-top: 150px;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .carrosel img {
+        margin-top: 20vh;
+    }
+}

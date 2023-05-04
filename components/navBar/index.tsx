@@ -59,7 +59,7 @@ const Navbar = () => {
                 </div>
 
                 <div className={styles.verticalLine}></div>
-
+{/* Altererar o titulo pelo pdf que o Dennis me enviou */}
                 <a href='/'>
                     <div className={styles.logo}>
                             <img src="/images/logo/logo.png" alt="" />

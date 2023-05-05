@@ -6,7 +6,7 @@ import styles from './style.module.css';
 const navList = [
     { name: 'Inicio', img: '', link: '/' },
     { name: 'Produtos', img: '', link: '/sobre' },
-    { name: 'Parceiros', img: '', link: '/tecnologias' },
+    { name: 'Contato', img: '', link: '/tecnologias' },
     { name: 'Sobre nós', img: '', link: '/contato' }
 ]
 const socialList = [

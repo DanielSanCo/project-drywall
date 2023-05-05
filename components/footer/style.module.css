@@ -1,6 +1,6 @@
 .footer {
     width: 100vw;
-    height: 80vh;
+    min-height: 80vh;
     background-color: black;
     bottom: 0;
     left: 0;
@@ -12,23 +12,31 @@
     align-items: center;
     flex-direction: column;
 }
+
 .footer .logo {
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    justify-content: center;
 }
+
 .footer .logo img {
     width: 50px;
 }
+
 .footer .logo h2 {
     font-weight: bold;
     font-size: 30px;
 }
+
 .footer .social {
     margin: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .footer .social img {
     width: 30px;
     border-radius: 50%;
@@ -58,9 +66,11 @@
 .footer .parceiros img {
     width: 30px;
 }
+
 .footer .menu {
     display: flex;
 }
+
 .footer .itemMenu {
     margin: 10px;
     cursor: pointer;
@@ -71,6 +81,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .footer .infos .contato {
     margin-right: 60px;
 }
@@ -84,5 +95,18 @@
     height: 50px;
     margin-top: 15px;
     font-size: 13px;
-    color:rgb(138, 138, 138);
+    color: rgb(138, 138, 138);
+}
+
+@media (max-width: 700px) {
+
+    .footer .logo h2 {
+        font-size: 25px;
+    }
+    .footer .infos {
+        font-size: 13px;
+    }
+    .footer .infos .contato {
+        margin-right: 40px;
+    }
 }

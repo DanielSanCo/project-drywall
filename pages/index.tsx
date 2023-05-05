@@ -1,8 +1,13 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import Carrosel from '@/components/carrosel'
 import Head from 'next/head'
 import Footer from '@/components/footer'
+import Parceiros from '@/components/parceiros'
+import Carousel from '@/components/carousel'
+import Produtos from '@/components/produtos'
+import Categorias from '@/components/categorias'
+import PosCategoria from '@/components/local'
+import Local from '@/components/local'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,7 +20,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Carrosel />
+      <Carousel />
+      <Parceiros />
+      <Produtos />
+      <Categorias />
+      <Local />
     </div>
   )
 }

@@ -2,7 +2,6 @@
     width: 100vw;
     height: 150px;
     color: white;
-    position: absolute;
     z-index: 2;
     flex-direction: column;
     top: 0;
@@ -18,12 +17,13 @@
 }
 
 .nav .test2 {
-    background-color: rgb(195, 195, 195);
+    background-color: whitesmoke;
     width: 100%;
     height: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 1px 1px 5px black;
 }
 
 .parceriaArea {

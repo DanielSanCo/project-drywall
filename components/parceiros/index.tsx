@@ -1,0 +1,53 @@
+import Image from 'next/image';
+import Link from 'next/link';
+import styles from './style.module.css';
+import { useRef } from 'react';
+
+const carrosel = [
+    { img: '/images/logo/logo.png' },
+    { img: '/images/logo/logo.png' },
+    { img: '/images/logo/logo.png' },
+    { img: '/images/logo/logo.png' },
+    { img: '/images/logo/logo.png' },
+    { img: '/images/logo/logo.png' },
+    { img: '/images/logo/logo.png' },
+    { img: '/images/logo/logo.png' },
+]
+
+const Parceiros = () => {
+    const carousel = useRef(null)
+
+    const handleLeftClick = () => {
+        carousel.current.scrollLeft -= carousel.current.offsetWidth;
+    }
+
+    const handleRightClick = () => {
+        carousel.current.scrollLeft += carousel.current.offsetWidth;
+    }
+
+
+    return (
+        <div className={styles.container}>
+            <div className={styles.parceiros}>
+                PARCEIROS
+            </div>
+            <div className={styles.geralArea}>
+                <div className={styles.arrow} onClick={() => handleLeftClick()}>
+                    <img src="/images/favCons/favArrow.png" alt="" />
+                </div>
+                <div className={styles.parceirosArea} ref={carousel}>
+                    {carrosel.map((item, index) => (
+                        <div key={index}>
+                            <img src={item.img} alt="" />
+                        </div>
+                    ))}
+                </div>
+                <div className={styles.arrow} onClick={() => handleRightClick()}>
+                    <img src="/images/favCons/favArrowR.png" alt="" />
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Parceiros;

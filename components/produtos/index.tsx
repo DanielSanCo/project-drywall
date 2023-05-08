@@ -17,12 +17,12 @@ const Produtos = () => {
             <div className={styles.produtosArea}>
                 {produtos.map((item, index) => (
                     <div className={styles.item} key={index} onMouseMove={() => {setDisplay('flex'), setId(index)}} onMouseOut={() => setDisplay('none')}>
-                        <div className={styles.produtoImg}>
+                        <a href={`/produtos/item/${index}`}><div className={styles.produtoImg}>
                             <img src={item.img} alt="" />
                         </div>
                         <div className={styles.produtoName}>
                             <div>{item.name}</div>
-                        </div>
+                        </div></a>
                         <div className={styles.contatoArea}>
                             {id >= 0 && index === id ?
                             <div className={styles.zap} style={{ display: display }}>
@@ -35,7 +35,7 @@ const Produtos = () => {
                     </div>
                 ))}
             </div>
-            <div className={styles.allProd}>TODOS OS PRODUTOS</div>
+            <a href='/produtos'><div className={styles.allProd}>TODOS OS PRODUTOS</div></a>
         </div>
     )
 }

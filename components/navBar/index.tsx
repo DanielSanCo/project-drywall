@@ -5,9 +5,9 @@ import styles from './style.module.css';
 
 const navList = [
     { name: 'Inicio', img: '', link: '/' },
-    { name: 'Produtos', img: '', link: '/sobre' },
-    { name: 'Contato', img: '', link: '/tecnologias' },
-    { name: 'Sobre nós', img: '', link: '/contato' }
+    { name: 'Produtos', img: '', link: '/produtos' },
+    { name: 'Contato', img: '', link: '/contato' },
+    { name: 'Sobre nós', img: '', link: '/sobre' }
 ]
 const socialList = [
     { name: 'Whatsapp', img: '/images/social/whatsapp.png', link: 'https://web.whatsapp.com/send?phone=5521999999999' },

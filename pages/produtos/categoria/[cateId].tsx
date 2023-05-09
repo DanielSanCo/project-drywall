@@ -32,7 +32,7 @@ const Produtos = () => {
                 <div className={styles.produtosArea}>
                     {produtos.map((item, index) => (
                         <>
-                            {item.categoria === cateId ?
+                            {item.categoria === cateId || item.parceiro === cateId ?
                                 <div className={styles.item} key={index} onMouseMove={() => { setDisplay('flex'), setId(index) }} onMouseOut={() => setDisplay('none')}>
                                     <a href={`/produtos/item/${index}`}><div className={styles.produtoImg}>
                                         <img src={item.img} alt="" />

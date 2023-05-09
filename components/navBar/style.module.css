@@ -50,7 +50,10 @@
 }
 
 .nav .logo .logoName {
-    text-align: center;
+    text-align: right;
+}
+.nav .logo .logoName .cellNumber {
+    font-size: 16px;
 }
 
 .socialArea {
@@ -159,6 +162,15 @@
     .nav .logo img {
         width: 50px;
         margin: 10px;
+    }
+    .nav .logo .logoName {
+        text-align: center;
+    }
+    .nav .logo .logoName span {
+        display: none;
+    }
+    .nav .logo .logoName .cellNumber {
+        font-size: 13px;
     }
 
     .socialArea {

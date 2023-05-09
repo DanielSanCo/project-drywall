@@ -59,11 +59,14 @@ const Navbar = () => {
                 </div>
 
                 <div className={styles.verticalLine}></div>
-{/* Altererar o titulo pelo pdf que o Dennis me enviou */}
                 <a href='/'>
                     <div className={styles.logo}>
-                            <img src="/images/logo/logo.png" alt="" />
-                            <div className={styles.logoName}>DOUTOR DRYWALL</div>
+                        <img src="/images/logo/logo.png" alt="" />
+                        <div className={styles.logoName}>
+                            <div>Doutor Drywall<span> e Materiais</span></div>
+                            <div className={styles.cellNumber}>3556-2929 ou 3556-2019</div>
+
+                        </div>
                     </div>
                 </a>
 

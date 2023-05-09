@@ -4,14 +4,14 @@ import styles from './style.module.css';
 import { useRef } from 'react';
 
 const carrosel = [
-    { img: '/images/logo/logo.png' },
-    { img: '/images/logo/logo.png' },
-    { img: '/images/logo/logo.png' },
-    { img: '/images/logo/logo.png' },
-    { img: '/images/logo/logo.png' },
-    { img: '/images/logo/logo.png' },
-    { img: '/images/logo/logo.png' },
-    { img: '/images/logo/logo.png' },
+    { img: '/images/logo/logo.png', link: '/produtos/categoria/A' },
+    { img: '/images/parceiros/amanco.png', link: '/produtos/categoria/A' },
+    { img: '/images/logo/logo.png', link: '/produtos/categoria/B' },
+    { img: '/images/logo/logo.png', link: '/produtos/categoria/B' },
+    { img: '/images/logo/logo.png', link: '/produtos/categoria/C' },
+    { img: '/images/logo/logo.png', link: '/produtos/categoria/C' },
+    { img: '/images/logo/logo.png', link: '/produtos/categoria/C' },
+    { img: '/images/logo/logo.png', link: '/produtos/categoria/C' },
 ]
 
 const Parceiros = () => {
@@ -38,7 +38,7 @@ const Parceiros = () => {
                 <div className={styles.parceirosArea} ref={carousel}>
                     {carrosel.map((item, index) => (
                         <div key={index}>
-                            <img src={item.img} alt="" />
+                            <a href={item.link}><img src={item.img} alt="" /></a>
                         </div>
                     ))}
                 </div>

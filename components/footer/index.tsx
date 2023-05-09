@@ -46,7 +46,7 @@ const Footer = () => {
                     <div style={{ fontWeight: 'bold' }}>Contato</div>
                     <div>+2199999-9999</div>
                     <div>+2199999-9999</div>
-                    <div>email@hotmail.com</div>
+                    <div>drmateriaisedrywall@gmail.com</div>
                 </div>
 
                 <div>
@@ -66,7 +66,7 @@ const Footer = () => {
             </div>
             <div className={styles.menu}>
                 {navList.map((item, index) => (
-                    <div className={styles.itemMenu}>
+                    <div className={styles.itemMenu} key={index}>
                         {item.name}
                     </div>
                 ))}

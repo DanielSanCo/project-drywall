@@ -1,0 +1,153 @@
+.container {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contato {
+    min-height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    padding-left: 10%;
+}
+.contato h1 {
+    font-size: 23px;
+    letter-spacing: 4px;
+}
+.center {
+    min-height: 80vh;
+    width: 1000px;
+    display: flex;
+}
+.center .centerInfoContato, .centerContato {
+    width: 50%;
+}
+.center .contato, .center {
+    min-width: 50%;
+    margin: 1px;
+}
+.center div .titulo {
+    font-weight: bold;
+    font-size: 23px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.center .infoContato {
+    display: flex;
+    flex-wrap: wrap;
+}
+.center .infoContato .eachInfo {
+    height: 120px;
+    width: 45%;
+    margin: 1px;
+
+}
+.center .infoContato .eachInfo img {
+    width: 35px;
+}
+.container .centerContato .inputs .nome {
+    width: 100%;
+    background-color: rgb(32, 30, 30);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+.container .centerContato .inputs .nome div{
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container .centerContato .inputs img {
+    width: 70%;
+}
+
+.container .centerContato input {
+    border-left: 1px solid white;
+    width: 100%;
+    height: 35px;
+    padding: 3px;
+    background-color: rgb(32, 30, 30);
+    color: white;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.container .centerContato textarea {
+    border-left: 1px solid white;
+    width: 100%;
+    height: 100px;
+    padding: 3px;
+    background-color: rgb(32, 30, 30);
+    color: white;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.container .centerContato input {
+    border-left: 1px solid white;
+    width: 100%;
+    height: 35px;
+    padding: 3px;
+    background-color: rgb(32, 30, 30);
+    color: white;
+}
+
+.container .centerContato .button {
+    border: 1px solid white;
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgb(2, 0, 109);
+    cursor: pointer;
+    transition: all ease-in 0.2s;
+}
+
+.container .centerContato .button:hover {
+    background-color: rgb(20, 0, 199);
+}
+.container .eachInfo div {
+    display: flex;
+    flex-direction: column;
+}
+.container .map {
+    width: 70vw;
+    height: 70vh;
+    margin-bottom: 100px;
+}
+.container .map h1 {
+    font-size: 30px;
+    height: 60px;
+}
+.container .map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 900px) {
+    .center {
+        flex-direction: column;
+        width: 90%;
+    }
+    .center .centerInfoContato, .centerContato {
+        width: 100%;
+        min-height: 50%;
+    }
+    .contato {
+        margin-top: 20vh;
+    }
+    .center div .titulo {
+        font-size: 20px;
+    }
+
+}

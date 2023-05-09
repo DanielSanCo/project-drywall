@@ -4,13 +4,6 @@ import styles from './style.module.css';
 import { useRef } from 'react';
 import categoria from '@/utils/categoria';
 
-const categorias = [
-    {name: 'Limpeza', img: '/images/limpeza.jpg'},
-    {name: 'Limpeza', img: '/images/limpeza.jpg'},
-    {name: 'Limpeza', img: '/images/limpeza.jpg'},
-    {name: 'Limpeza', img: '/images/limpeza.jpg'},
-]
-
 const Categorias = () => {
 
 

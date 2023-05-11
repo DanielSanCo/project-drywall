@@ -5,7 +5,7 @@ import { useRef } from 'react';
 
 const carrosel = [
     { img: '/images/logo/logo.png', link: '/produtos/categoria/A' },
-    { img: '/images/parceiros/amanco.png', link: '/produtos/categoria/A' },
+    { img: '/images/parceiros/amanco.png', link: '/produtos/categoria/Amanco' },
     { img: '/images/logo/logo.png', link: '/produtos/categoria/B' },
     { img: '/images/logo/logo.png', link: '/produtos/categoria/B' },
     { img: '/images/logo/logo.png', link: '/produtos/categoria/C' },

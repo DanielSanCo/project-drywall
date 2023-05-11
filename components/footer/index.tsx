@@ -23,9 +23,9 @@ const carrosel = [
 
 const navList = [
     { name: 'Inicio', img: '', link: '/' },
-    { name: 'Produtos', img: '', link: '/sobre' },
-    { name: 'Parceiros', img: '', link: '/tecnologias' },
-    { name: 'Sobre nós', img: '', link: '/contato' }
+    { name: 'Produtos', img: '', link: '/produtos' },
+    { name: 'Contato', img: '', link: '/contato' },
+    { name: 'Sobre nós', img: '', link: '/sobre' }
 ]
 
 const Footer = () => {
@@ -67,7 +67,7 @@ const Footer = () => {
             <div className={styles.menu}>
                 {navList.map((item, index) => (
                     <div className={styles.itemMenu} key={index}>
-                        {item.name}
+                        <a href={item.link}>{item.name}</a>
                     </div>
                 ))}
             </div>

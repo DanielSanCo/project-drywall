@@ -5,6 +5,7 @@ import { useState } from 'react';
 import produtos from '@/utils/produtos';
 import Head from 'next/head';
 import categoria from '@/utils/categoria';
+import Categorias from '@/components/categorias/categorias';
 
 const Produtos = () => {
     const [display, setDisplay] = useState('none')
@@ -25,8 +26,8 @@ const Produtos = () => {
                 <div style={{ display: 'none' }}>{count}</div>
             </div>
             <div className={styles.produtosSection}>
+                <Categorias />
                 <div className={styles.produtosArea}>
-
                     <div className={styles.categoriaArea}>
                         {categoria.map((item, index) => (
                             <div className={styles.item} key={index}>
@@ -39,12 +40,6 @@ const Produtos = () => {
                             </div>
                         ))}
                     </div>
-                </div>
-                <div className={styles.categorias}>
-                    <h3>CATEGORIA</h3>
-                    {categoria.map((item, index) => (
-                        <a href={item.link} key={index}><div className={styles.item} onClick={() => { setCount(count + 1), setCate(item.name) }}>{item.name}</div></a>
-                    ))}
                 </div>
             </div>
 

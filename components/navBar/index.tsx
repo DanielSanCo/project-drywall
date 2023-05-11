@@ -2,6 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import styles from './style.module.css';
+import categoria from '@/utils/categoria';
+import topCategorias from '@/utils/topCategorias';
 
 const navList = [
     { name: 'Inicio', img: '', link: '/' },
@@ -25,6 +27,8 @@ const Navbar = () => {
     const [buttonAnim, setButtonAnim] = useState('');
     const [buttonAnim2, setButtonAnim2] = useState('');
     const [buttonAnim3, setButtonAnim3] = useState('');
+    const [display, setDisplay] = useState('none')
+    const [id, setId] = useState(0)
 
     const showResponseMenu = () => {
         active === 'translateX(-100%)' ? setActive('translateX(0)') : setActive('translateX(-100%)');
@@ -64,7 +68,7 @@ const Navbar = () => {
                         <img src="/images/logo/logo.png" alt="" />
                         <div className={styles.logoName}>
                             <div>Doutor Drywall<span> e Materiais</span></div>
-                            <div className={styles.cellNumber}>3556-2929 ou 3556-2019</div>
+                            <div className={styles.cellNumber}>3556-2929 / 3556-2019</div>
 
                         </div>
                     </div>
@@ -85,13 +89,37 @@ const Navbar = () => {
 
             <div className={styles.test2}>
                 <ul>
-                    {navList.map((item, index) => (
-                        <li key={index}>
-                            <a href={item.link} style={{ textTransform: 'uppercase', fontWeight: 'bold', fontSize: '12px' }}>
+                    {topCategorias.map((item, index) => (
+                        <>
+                            <li key={index} onMouseMove={() => { setDisplay('flex'), setId(index) }} onMouseOut={() => setDisplay('none')}>
                                 {item.name}
-                            </a>
-                        </li>
+                                {id >= 0 && index === id ?
+                                    <ul className={styles.ul} style={{ display: display }}>
+                                        {categoria.map((item, index) => (
+                                            <>
+                                                {
+                                                    item.categoria == topCategorias[id].name ?
+                                                        <li>
+                                                            <a href={item.link} style={{ textTransform: 'uppercase', fontWeight: 'bold', fontSize: '10px' }}>
+                                                                {item.name}
+                                                            </a>
+                                                        </li>
+                                                        :
+                                                        ''
+                                                }
+                                            </>
+                                        ))}
+                                    </ul>
+                                    :
+                                    ''
+                                }
+                            </li>
+                            <div className={styles.cateList}></div>
+                        </>
                     ))}
+                    <div className={styles.line}></div>
+                    <a href='/contato'><li>Contato</li></a>
+                    <a href='/sobre'><li>Sobre Nós</li></a>
                 </ul>
             </div>
 

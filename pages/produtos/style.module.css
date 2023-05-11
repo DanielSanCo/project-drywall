@@ -30,9 +30,10 @@
 .container .produtosSection {
     display: flex;
     width: 100vw;
+    justify-content: center;
 }
 .container .produtosArea {
-    width: 80vw;
+    width: 70vw;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -69,28 +70,40 @@
 
 .categorias {
     margin: 10px;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    color: rgb(0, 0, 114);
+    background-color: white;
+    padding: 15px;
+}
+.categorias .categoriaList {
+    background-color: white;
+    width: 100%;
 }
 .categorias h3 {
     font-weight: bold;
+    border-bottom: 1px solid rgb(173, 173, 173);
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
 }
 .categoriaAtual {
     color: rgb(0, 0, 114);
     font-weight: bold;
 }
-.container .categorias {
-    color: rgb(0, 0, 114);
-}
-.container .categorias .item {
+.container .categorias .itemName {
     margin-top: 5px;
     margin-bottom: 5px;
 }
-.container .categorias .item:hover {
+.container .categorias .itemName:hover {
     color: rgb(41, 41, 229);
 }
 
 
 .container .categoriaArea {
-    width: 80%;
+    width: 90%;
     min-height: 10vh;
     display: flex;
     justify-content: center;

@@ -16,23 +16,28 @@ const Produtos = () => {
             </div>
             <div className={styles.produtosArea}>
                 {produtos.map((item, index) => (
-                    <div className={styles.item} key={index} onMouseMove={() => {setDisplay('flex'), setId(index)}} onMouseOut={() => setDisplay('none')}>
-                        <a href={`/produtos/item/${index}`}><div className={styles.produtoImg}>
-                            <img src={item.img} alt="" />
-                        </div>
-                        <div className={styles.produtoName}>
-                            <div>{item.name}</div>
-                        </div></a>
-                        <div className={styles.contatoArea}>
-                            {id >= 0 && index === id ?
-                            <div className={styles.zap} style={{ display: display }}>
-                                <div>Entrar em Contato</div>
-                                <img src="/images/social/whatsapp.png" alt="" />
+                    <>
+                        {index <= 11 ?
+                            <div className={styles.item} key={index} onMouseMove={() => { setDisplay('flex'), setId(index) }} onMouseOut={() => setDisplay('none')}>
+                                <a href={`/produtos/item/${index}`}><div className={styles.produtoImg}>
+                                    <img src={item.img} alt="" />
+                                </div>
+                                    <div className={styles.produtoName}>
+                                        <div>{item.name}</div>
+                                    </div></a>
+                                <div className={styles.contatoArea}>
+                                    {id >= 0 && index === id ?
+                                        <div className={styles.zap} style={{ display: display }}>
+                                            <div>Entrar em Contato</div>
+                                            <img src="/images/social/whatsapp.png" alt="" />
+                                        </div>
+                                        :
+                                        ''}
+                                </div>
                             </div>
                             :
-                            '' }
-                        </div>
-                    </div>
+                            ''}
+                    </>
                 ))}
             </div>
             <a href='/produtos'><div className={styles.allProd}>TODOS OS PRODUTOS</div></a>

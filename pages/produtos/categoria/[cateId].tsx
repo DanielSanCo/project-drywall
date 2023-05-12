@@ -12,14 +12,13 @@ const Produtos = () => {
     const [display, setDisplay] = useState('none')
     const [id, setId] = useState(0)
     const router = useRouter()
+    const [qtd, setQtd] = useState(0)
 
     const cateId = router.query.cateId
 
-    const [itemNumber, setItemNumber] = useState(0)
-
-    const itemNumbers = () => {
-        for (let i = 0; i <= produtos.length; i++) {
-            produtos[i].categoria == cateId ? setItemNumber(itemNumber + 1) : ''
+    const page = () => {
+        for (let i = 0; i < produtos.length; i++) {
+            produtos[i].categoria == cateId ? setQtd(qtd + 1) : ''
         }
     }
 
@@ -31,7 +30,7 @@ const Produtos = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className={styles.titulo}>
-                <h1 onClick={() => itemNumbers()}>PRODUTOS</h1>
+                <h1>PRODUTOS</h1>
                 <h3>Conheça nossa diversidade de produtos de {cateId}</h3>
             </div>
             <div className={styles.caminho}><a href='/'>Home</a> > <a href='/produtos'>Produtos</a> > {cateId}</div>
@@ -46,6 +45,7 @@ const Produtos = () => {
                         {produtos.map((item, index) => (
                             <>
                                 {item.categoria === cateId || item.parceiro === cateId ?
+
                                     <div className={styles.item} key={index} onMouseMove={() => { setDisplay('flex'), setId(index) }} onMouseOut={() => setDisplay('none')}>
                                         <a href={`/produtos/item/${index}`}><div className={styles.produtoImg}>
                                             <img src={item.img} alt="" />
@@ -63,12 +63,11 @@ const Produtos = () => {
                                                 ''}
                                         </div>
                                     </div>
-                                    :
-                                    ''
-                                }
+                                    : ''}
                             </>
                         ))}
                     </div>
+                    <div onClick={() => page()}>olá ({qtd})</div>
                 </div>
             </div>
 

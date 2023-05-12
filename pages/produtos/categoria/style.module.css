@@ -34,7 +34,7 @@
     justify-content: center;
 }
 .container .produtosArea {
-    width: 70vw;
+    width: 77vw;
     min-height: 90vh;
     display: flex;
     flex-direction: column;
@@ -43,6 +43,9 @@
 .container .produtoList {
     display: flex;
     flex-wrap: wrap;
+    height: 1590px;
+    background-color: green;
+    overflow-y: scroll;
 }
 
 .container .produtosArea .item {
@@ -144,7 +147,8 @@
         text-align: center;
     }
     .container .produtosArea {
-        width: 90%;
+        width: 95vw;
+        margin: 10px;
     }
     .container .produtosArea .item {
         width: 200px;

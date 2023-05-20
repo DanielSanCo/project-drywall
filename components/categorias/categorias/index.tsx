@@ -12,7 +12,7 @@ const Categorias = () => {
             {categoria.map((item, index) => (
                 <a href={item.link} key={index}>
                     <div className={styles.itemName} onClick={() => { setCount(count + 1) }}>
-                        {item.name} ({itemNumber})
+                        {item.name}
                     </div>
                 </a>
             ))}

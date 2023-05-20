@@ -2,17 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './style.module.css';
 import { useRef } from 'react';
-
-const carrosel = [
-    { img: '/images/logo/logo.png', link: '/produtos/categoria/A' },
-    { img: '/images/parceiros/amanco.png', link: '/produtos/categoria/Amanco' },
-    { img: '/images/logo/logo.png', link: '/produtos/categoria/B' },
-    { img: '/images/logo/logo.png', link: '/produtos/categoria/B' },
-    { img: '/images/logo/logo.png', link: '/produtos/categoria/C' },
-    { img: '/images/logo/logo.png', link: '/produtos/categoria/C' },
-    { img: '/images/logo/logo.png', link: '/produtos/categoria/C' },
-    { img: '/images/logo/logo.png', link: '/produtos/categoria/C' },
-]
+import parceiros from '@/utils/marcas';
 
 const Parceiros = () => {
     const carousel = useRef(null)
@@ -36,7 +26,7 @@ const Parceiros = () => {
                     <img src="/images/favCons/favArrow.png" alt="" />
                 </div>
                 <div className={styles.parceirosArea} ref={carousel}>
-                    {carrosel.map((item, index) => (
+                    {parceiros.map((item, index) => (
                         <div key={index}>
                             <a href={item.link}><img src={item.img} alt="" /></a>
                         </div>

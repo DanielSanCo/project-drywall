@@ -14,7 +14,7 @@
     align-items: center;
     flex-direction: column;
     cursor: default;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .container .titulo h1 {
@@ -30,14 +30,16 @@
 .container .mapa {
     background-color: rgb(43, 41, 41);
     min-width: 300px;
-    min-height: 300px;
+    min-height: 350px;
     margin-bottom: 50px;
     display: flex;
 }
-
+.container .mapa iframe {
+    min-height: 350px;
+}
 .container .contato {
     max-width: 600px;
-    min-height: 300px;
+    min-height: 100%;
 }
 
 .container .contato h1 {
@@ -107,6 +109,16 @@
         flex-direction: column;
     }
 
+    .container .mapa iframe {
+        min-height: 300px;
+        width: 100%;
+    }
+    .container .contato {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
     .container .contato .nome {
         width: 260px;
     }

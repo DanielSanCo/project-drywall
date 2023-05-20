@@ -8,7 +8,7 @@
 }
 
 .nav .test {
-    background-color: brown;
+    background-color: rgb(165, 42, 42);
     width: 100%;
     min-height: 65%;
     display: flex;
@@ -76,6 +76,7 @@
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
+
 .nav .logo img {
     width: 60px;
     margin: 10px;
@@ -98,8 +99,9 @@
 }
 
 .socialArea .socialItens img {
-    width: 40px;
+    width: 30px;
     border-radius: 10px;
+    margin: 10px;
 }
 
 .parceirosList {
@@ -110,7 +112,7 @@
 }
 
 .parceirosList div img {
-    width: 18px;
+    width: 30px;
     margin: 5px;
 }
 
@@ -119,7 +121,6 @@
     justify-content: center;
     align-items: center;
 }
-
 .nav ul {
     display: flex;
     width: 100%;

@@ -12,14 +12,15 @@ const navList = [
     { name: 'Sobre nós', img: '', link: '/sobre' }
 ]
 const socialList = [
-    { name: 'Whatsapp', img: '/images/social/whatsapp.png', link: 'https://web.whatsapp.com/send?phone=5521999999999' },
+    { name: 'Whatsapp', img: '/images/social/whatsapp.png', link: 'https://web.whatsapp.com/send?phone=552135562929' },
+    { name: 'Instagram', img: '/images/social/insta.png', link: 'https://www.instagram.com/' },
 ]
 
 const parceiros = [
-    { name: '', img: 'https://logodownload.org/wp-content/uploads/2014/04/mcdonalds-logo-1-1.png' },
-    { name: '', img: 'https://logodownload.org/wp-content/uploads/2014/04/mcdonalds-logo-1-1.png' },
-    { name: '', img: 'https://logodownload.org/wp-content/uploads/2014/04/mcdonalds-logo-1-1.png' },
-    { name: '', img: 'https://logodownload.org/wp-content/uploads/2014/04/mcdonalds-logo-1-1.png' },
+    { name: '', img: '/images/parceiros/amanco.png' },
+    { name: '', img: '/images/parceiros/perfilLider.jpg' },
+    { name: '', img: '/images/parceiros/knauf.png' },
+    { name: '', img: '/images/parceiros/viapol.png' },
 ]
 
 const Navbar = () => {

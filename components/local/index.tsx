@@ -1,6 +1,22 @@
+import { useState } from 'react';
 import styles from './style.module.css';
 
 const Local = () => {
+    const [assunto, setAssunto] = useState('')
+    const [texto, setTexto] = useState('')
+    const [email, setEmail] = useState('')
+
+    const changeEmail = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setEmail(event.target.value)
+    }
+
+    const changeAssunto = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setAssunto(event.target.value)
+    }
+    const changeText = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setTexto(event.target.value)
+    }
+
     return (
         <div className={styles.container}>
             <div className={styles.titulo}>
@@ -21,17 +37,25 @@ const Local = () => {
                         <div>
                             <img src="/images/favCons/mail.png" alt="" />
                         </div>
-                        <input type="text" placeholder='E-mail' />
+                        <input type="text" placeholder='E-mail' value={email} onChange={() => changeEmail} />
                     </div>
                     <div className={styles.nome}>
                         <div>
                             <img src="/images/favCons/home.png" alt="" />
                         </div>
-                        <input type="text" placeholder='Assunto' />
+                        <input type="text" placeholder='Assunto' value={assunto} onChange={() => changeAssunto} />
                     </div>
-                    <div style={{display: 'flex'}}>
-                        <div className={styles.button}>Enviar</div>
-                        <div className={styles.button} style={{backgroundColor: 'green'}}>Whatsapp</div>
+                    <div className={styles.nome}>
+                        <div>
+                            <img src="/images/favCons/home.png" alt="" />
+                        </div>
+                        <input type="text" placeholder='Texto' value={texto} onChange={() => changeText} />
+                    </div>
+                    <div style={{ display: 'flex' }}>
+                        <a href={`mailto:drmateriaisedrywall@gmail.com?subject=${assunto}&cc=${email}&body=${texto}`}>
+                            <div className={styles.button}>Enviar</div>
+                        </a>
+                        <div className={styles.button} style={{ backgroundColor: 'green' }}>Whatsapp</div>
                     </div>
 
                 </div>

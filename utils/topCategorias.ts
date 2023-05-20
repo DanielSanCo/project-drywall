@@ -1,8 +1,10 @@
 const topCategorias = [
-    {name: 'Construção Seca'},
-    {name: 'Materiais de Construção'},
-    {name: 'Tintas e Acessórios'},
-    {name: 'Ferramentas'},
+    { name: 'Drywall' },
+    { name: 'Materiais de Construção' },
+    { name: 'Tintas e Acessórios' },
+    { name: 'Acessórios' },
+    { name: 'Tubos e Conexões' },
+    { name: 'Utilidades' },
 ]
 
 export default topCategorias;

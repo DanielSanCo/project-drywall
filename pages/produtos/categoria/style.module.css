@@ -13,7 +13,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgb(122, 1, 1);
+    background-color: brown;
     color: white;
     cursor: default;
     margin-bottom: 20px;
@@ -43,14 +43,11 @@
 .container .produtoList {
     display: flex;
     flex-wrap: wrap;
-    height: 1590px;
-    background-color: green;
-    overflow-y: scroll;
 }
 
 .container .produtosArea .item {
     min-height: 270px;
-    width: 245px;
+    width: 236px;
     text-align: center;
     background-color: white;
     box-shadow: 1px 1px 5px rgb(70, 70, 70);
@@ -61,6 +58,11 @@
 
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container .produtosArea .item a {
+    display: flex;
     align-items: center;
     flex-direction: column;
 }

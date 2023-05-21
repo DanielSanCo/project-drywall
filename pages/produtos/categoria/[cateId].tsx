@@ -77,9 +77,19 @@ const Produtos = () => {
 
                                     <div className={styles.item} key={index} onMouseMove={() => { setDisplay('flex'), setId(index) }} onMouseOut={() => setDisplay('none')}>
 
-                                        <a href={`/produtos/item/${index}`}><div className={styles.produtoImg}>
-                                            <img src={item.img} alt="" />
-                                        </div>
+                                        <a href={`/produtos/item/${index}`}>
+                                            <div className={styles.marcaImg}>
+                                                {item.marca}
+                                            </div>
+                                            {itens.length < 0 ?
+                                                <div>
+                                                    <img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="" />
+                                                </div>
+                                                :
+                                                <div className={styles.produtoImg}>
+                                                    <img src={item.img} alt="" />
+                                                </div>
+                                            }
                                             <div className={styles.produtoName}>
                                                 <div>{item.name}</div>
                                             </div></a>

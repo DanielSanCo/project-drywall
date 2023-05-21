@@ -1,7 +1,7 @@
 .categorias {
     margin: 10px;
     width: 220px;
-    height: 670px;
+    height: 770px;
     display: flex;
     flex-direction: column;
     color: rgb(0, 0, 114);
@@ -17,6 +17,14 @@
     display: flex;
     align-items: center;
 }
+.categorias a {
+    margin-bottom: 0px;
+}
 .categorias a:hover {
     color: blue;
+}
+
+.categorias h4 {
+    font-weight: bold;
+    margin-top: 5px;
 }

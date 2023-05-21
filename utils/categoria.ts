@@ -11,13 +11,13 @@ const categoria = [
     { name: 'Argamassas', categoria: 'Materiais de Construção', link: '/produtos/categoria/Argamassa', img: '/images/argamassa.jpg' },
     { name: 'Fixação', categoria: 'Materiais de Construção', link: '/produtos/categoria/Fixação', img: '/images/fixar.jpg' },
     { name: 'Conexões', categoria: 'Tubos e Conexões', link: '/produtos/categoria/Conexões', img: '/images/conexão.jpeg' },
-    { name: 'Tubos', categoria: 'Tubos e Conexões', link: '/produtos/categoria/Tubos', img: '/images/tubo.avif' },
+    { name: 'Tubos', categoria: 'Tubos e Conexões', link: '/produtos/categoria/Tubos', img: '/images/tubo.jpg' },
     { name: 'Impermeabilizante', link: '/produtos/categoria/Impermeabilizante', img: '/images/ipermeabilizante.jpg' },
     { name: 'Abrasivos', categoria: 'Tintas e Acessórios', link: '/produtos/categoria/Abrasivos', img: '/images/abrasivo.png' },
     { name: 'Segurança', categoria: 'Tintas e Acessórios', link: '/produtos/categoria/Segurança', img: '/images/segurança.jpg' },
     { name: 'Louças', categoria: 'Acessórios', link: '/produtos/categoria/Louças', img: '/images/louça.jpg' },
     { name: 'Hidráulica', categoria: 'Acessórios', link: '/produtos/categoria/Hidráulica', img: '/images/hidraulica.jpg' },
-    { name: 'Elétrica', categoria: 'Acessórios', link: '/produtos/categoria/Elétrica', img: '/images/eletrica.jpg' },
+    { name: 'Elétrica', categoria: 'Acessórios', link: '/produtos/categoria/Elétrica', img: '/images/eletrica.png' },
     { name: 'Mantas', categoria: 'Materiais de Construção', link: '/produtos/categoria/Mantas', img: '/images/manta.jpg' },
     { name: 'Massas Corridas', categoria: 'Tintas e Acessórios', link: '/produtos/categoria/Massas-Corridas', img: '/images/massaCorrida.jpg' },
     { name: 'Lixeira', categoria: 'Utilidades', link: '/produtos/categoria/Lixeira', img: '/images/lixeira.jpg' },
@@ -25,7 +25,7 @@ const categoria = [
     { name: 'Acessórios', categoria: 'Tintas e Acessórios', link: '/produtos/categoria/Tinta-Acessorios', img: '/images/acessorio.jpg' },
     { name: 'Ipermeabilizantes', categoria: 'Tintas e Acessórios', link: '/produtos/categoria/Ipermeabilizantes', img: '/images/ipermeabilizante.jpg' },
     { name: 'Ferragens', categoria: 'Materiais de Construção', link: '/produtos/categoria/Ferragens', img: '/images/ferragem.jpg' },
-    
+    { name: 'Fios', categoria: 'Acessórios', link: '/produtos/categoria/Fios', img: '/images/fios.jpg' },    
 ]
 
 export default categoria;

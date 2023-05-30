@@ -11,6 +11,7 @@ import Categorias from '@/components/categorias/categorias';
 type Produto = {
     name: string,
     categoria: string,
+    subCategoria: string,
     descricao: string,
     img: string,
     marca: string,
@@ -36,7 +37,7 @@ const Produtos = () => {
         loadItens()
     }, [])
 
-    const cateId = router.query.cateId
+    const cateId = router.query.categId
 
     let reff = 0
     const qtdItens = async () => {
@@ -59,12 +60,12 @@ const Produtos = () => {
                 <link rel="icon" href="/favicon.png" />
             </Head>
             <div className={styles.titulo}>
-                <h1>PRODUTOS</h1>
+                <h1>Categoria ID</h1>
                 <h3>Conheça nossa diversidade de produtos de {cateId}</h3>
             </div>
             <div className={styles.caminho}><a href='/'>Home</a> > <a href='/produtos'>Produtos</a> > {cateId}</div>
             <div className={styles.produtosSection}>
-                <Categorias />
+                <Categorias cateId={cateId} />
                 <div className={styles.produtosArea}>
                     <div className={styles.categoriaAtual}>
                         {cateId}
@@ -92,17 +93,21 @@ const Produtos = () => {
                                             }
                                             <div className={styles.produtoName}>
                                                 <div>{item.name}</div>
-                                            </div></a>
-                                        <div className={styles.contatoArea}>
-                                            {id >= 0 && index === id ?
-                                                <a target="_blank" href={`https://web.whatsapp.com/send?phone=552135562929&text=doutordrywall.com/produtos/item/${index}`}>
-                                                    <div className={styles.zap} style={{ display: display }}>
-                                                        <div>Entrar em Contato</div>
-                                                        <img src="/images/social/whatsapp.png" alt="" />
-                                                    </div>
-                                                </a>
+                                            </div>
+
+                                            {item.dispo === 'Disponivel' ?
+                                                <div style={{ color: 'green', margin: '5px' }}>{item.dispo}</div>
                                                 :
-                                                ''}
+                                                <div style={{ color: 'red', margin: '5px' }}>{item.dispo}</div>
+                                            }
+                                        </a>
+                                        <div className={styles.contatoArea}>
+                                            <a target="_blank" href={`https://web.whatsapp.com/send?phone=552135562929&text=doutordrywall.com/produtos/item/${index}`}>
+                                                <div className={styles.zap}>
+                                                    <div>Entrar em Contato</div>
+                                                    <img src="/images/social/whatsapp.png" alt="" />
+                                                </div>
+                                            </a>
                                         </div>
                                     </div>
                                     : ''}

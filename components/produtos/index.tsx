@@ -21,7 +21,6 @@ type Parceiros = {
 }
 
 const Produtos = () => {
-    const [display, setDisplay] = useState('none')
     const [id, setId] = useState(0)
     const [itens, setItens] = useState<Produto[]>([])
     const [marcas, setMarcas] = useState<Parceiros[]>(parceiros)
@@ -47,7 +46,7 @@ const Produtos = () => {
                 {itens.map((item, index) => (
                     <>
                         {index <= 11 ?
-                            <div className={styles.item} key={index} onMouseMove={() => { setDisplay('flex'), setId(index) }} onMouseOut={() => setDisplay('none')}>
+                            <div className={styles.item} key={index}>
 
 
                                 <a href={`/produtos/item/${index}`}>
@@ -67,16 +66,18 @@ const Produtos = () => {
                                         <div>{item.name}</div>
                                     </div>
                                 </a>
+                                {item.dispo === 'Disponivel' ?
+                                    <div style={{color: 'green', margin: '5px'}}>{item.dispo}</div>
+                                    :
+                                    <div style={{color: 'red', margin: '5px'}}>{item.dispo}</div>
+                                }
                                 <div className={styles.contatoArea}>
-                                    {id >= 0 && index === id ?
                                         <a target="_blank" href={`https://web.whatsapp.com/send?phone=552135562929&text=doutordrywall.com/produtos/item/${index}`}>
-                                            <div className={styles.zap} style={{ display: display }}>
+                                            <div className={styles.zap}>
                                                 <div>Entrar em Contato</div>
                                                 <img src="/images/social/whatsapp.png" alt="" />
                                             </div>
                                         </a>
-                                        :
-                                        ''}
                                 </div>
                             </div>
                             :

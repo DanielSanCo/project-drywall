@@ -4,6 +4,7 @@ import { useState } from 'react';
 import styles from './style.module.css';
 import categoria from '@/utils/categoria';
 import topCategorias from '@/utils/topCategorias';
+import subCate from '@/utils/subCategorias';
 
 const navList = [
     { name: 'Inicio', img: '', link: '/' },
@@ -93,18 +94,22 @@ const Navbar = () => {
                     {topCategorias.map((item, index) => (
                         <>
                             <li key={index} onMouseMove={() => { setDisplay('flex'), setId(index) }} onMouseOut={() => setDisplay('none')}>
-                                {item.name}
+                                <a href={item.link}>
+                                    {item.name}
+                                </a>
                                 {id >= 0 && index === id ?
                                     <ul className={styles.ul} style={{ display: display }}>
-                                        {categoria.map((item, index) => (
+                                        {subCate.map((item, index) => (
                                             <>
                                                 {
-                                                    item.categoria == topCategorias[id].name ?
-                                                        <li>
-                                                            <a href={item.link} style={{ textTransform: 'uppercase', fontWeight: 'bold', fontSize: '10px' }}>
-                                                                {item.name}
+                                                    item.topCategoria == topCategorias[id].name ?
+                                                        <>
+                                                            <a href={item.link}>
+                                                                <li>
+                                                                    <div style={{ fontWeight: 'bold' }}>{item.name}</div>
+                                                                </li>
                                                             </a>
-                                                        </li>
+                                                        </>
                                                         :
                                                         ''
                                                 }

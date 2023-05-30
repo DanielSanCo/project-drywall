@@ -81,7 +81,7 @@ const Produtos = () => {
                                     </div>
                                     <a target="_blank" href={`https://web.whatsapp.com/send?phone=552135562929&text=doutordrywall.com/produtos/item/${index}`}>
                                         <div className={styles.zapButton}>
-                                            CLIQUE PARA COMPRAR
+                                            CLIQUE PARA PEDIR
                                             <img src="/images/social/whatsapp.png" alt="" />
                                         </div>
                                     </a>

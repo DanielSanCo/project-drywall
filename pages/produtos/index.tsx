@@ -6,6 +6,7 @@ import produtos from '@/utils/produtos';
 import Head from 'next/head';
 import categoria from '@/utils/categoria';
 import Categorias from '@/components/categorias/categorias';
+import topCategorias from '@/utils/topCategorias';
 
 const Produtos = () => {
     const [display, setDisplay] = useState('none')
@@ -26,10 +27,10 @@ const Produtos = () => {
                 <div style={{ display: 'none' }}>{count}</div>
             </div>
             <div className={styles.produtosSection}>
-                <Categorias />
+                <Categorias cateId={''} />
                 <div className={styles.produtosArea}>
                     <div className={styles.categoriaArea}>
-                        {categoria.map((item, index) => (
+                        {topCategorias.map((item, index) => (
                             <div className={styles.item} key={index} >
                                 <a href={item.link} key={index}>
                                     <div className={styles.produtoImg} >

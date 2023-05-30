@@ -34,7 +34,7 @@ const Footer = () => {
                     <div style={{ fontWeight: 'bold' }}>Contato</div>
                     <div>+213556-2929</div>
                     <div>drmateriaisedrywall@gmail.com</div>
-                    <div>CNPJ: xxxxxxxxxx</div>
+                    <div>CNPJ: 47.013.409/001-06</div>
                 </div>
 
                 <div>

@@ -9,9 +9,6 @@ import { Navigation, Pagination} from 'swiper'
 
 const carrosel = [
     { img: '/images/wallpaper/empresa.jpg' },
-    { img: '/images/wallpaper/empresa.jpg' },
-    { img: '/images/wallpaper/empresa.jpg' },
-    { img: '/images/wallpaper/empresa.jpg' },
 ]
 
 const Carousel = () => {

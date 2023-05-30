@@ -3,6 +3,7 @@ import Link from 'next/link';
 import styles from './style.module.css';
 import { useRef } from 'react';
 import categoria from '@/utils/categoria';
+import topCategorias from '@/utils/topCategorias';
 
 const Categorias = () => {
 
@@ -14,7 +15,7 @@ const Categorias = () => {
                 <h3>Procure o que mais deseja</h3>
             </div>
             <div className={styles.categoriaArea}>
-                {categoria.map((item, index) => (
+                {topCategorias.map((item, index) => (
                     <>
                         {index <= 8 ?
                             <div className={styles.item} key={index}>

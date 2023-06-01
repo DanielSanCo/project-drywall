@@ -40,7 +40,7 @@ const Produtos = () => {
     const cateId2 = router.query.cateId
 
     let reff = 0
-    const qtdItens = async () => {
+    const qtdItens = () => {
         for (let i = 0; i < itens.length; i++) {
             itens[i].categoria === cateId || itens[i].marca === cateId ? reff += 1 : ''
         }

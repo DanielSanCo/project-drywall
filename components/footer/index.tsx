@@ -19,13 +19,13 @@ const navList = [
 const Footer = () => {
     return (
         <div className={styles.footer}>
-            <a href='/'><div className={styles.logo}>
-                <img src="/images/logo/logo.png" alt="" />
+            <Link href='/'><div className={styles.logo}>
+                <Image src="/images/logo/logo.png" alt="" />
                 <h2>DOUTOR DRYWALL</h2>
-            </div></a>
+            </div></Link>
             <div className={styles.social}>
                 {social.map((item, index) => (
-                    <img src={item.img} alt="" key={index} />
+                    <Image src={item.img} alt="" key={index} />
                 ))}
             </div>
             <div className={styles.infos}>
@@ -47,17 +47,17 @@ const Footer = () => {
             </div>
             <div className={styles.parceiros}>
                 {parceiros.map((item, index) => (
-                    <a href={item.link}>
+                    <Link href={item.link}>
                         <div className={styles.item}>
-                            <img src={item.img} alt="" key={index} />
+                            <Image src={item.img} alt="" key={index} />
                         </div>
-                    </a>
+                    </Link>
                 ))}
             </div>
             <div className={styles.menu}>
                 {navList.map((item, index) => (
                     <div className={styles.itemMenu} key={index}>
-                        <a href={item.link}>{item.name}</a>
+                        <Link href={item.link}>{item.name}</Link>
                     </div>
                 ))}
             </div>

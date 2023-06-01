@@ -3,6 +3,7 @@ import styles from './style.module.css';
 import { useState } from "react";
 import topCategorias from "@/utils/topCategorias";
 import subCate from "@/utils/subCategorias";
+import Link from "next/link";
 
 type Props = {
     cateId: string | string[] | undefined
@@ -16,15 +17,15 @@ const Categorias = ({ cateId }: Props) => {
         <div className={styles.categorias}>
             <h3>CATEGORIA</h3>
             <div>
-                <h4><a href={subCate[0].link}>{cateId}</a></h4>
+                <h4><Link href={subCate[0].link}>{cateId}</Link></h4>
                 {categoria.map((item, index) => (
                     <>
                         {item.subCategoria == cateId ?
-                            <a href={item.link} key={index}>
+                            <Link href={item.link} key={index}>
                                 <div className={styles.itemName} onClick={() => { setCount(count + 1) }}>
                                     {item.name}
                                 </div>
-                            </a>
+                            </Link>
                             :
                             ''
                         }
@@ -34,11 +35,11 @@ const Categorias = ({ cateId }: Props) => {
                 {cateId === '' ?
                     <>
                         {subCate.map((item, index) => (
-                            <a href={item.link} key={index}>
+                            <Link href={item.link} key={index}>
                                 <div className={styles.itemName}>
                                     {item.name}
                                 </div>
-                            </a>
+                            </Link>
                         ))}
                     </>
                     :

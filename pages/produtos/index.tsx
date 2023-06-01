@@ -32,14 +32,14 @@ const Produtos = () => {
                     <div className={styles.categoriaArea}>
                         {topCategorias.map((item, index) => (
                             <div className={styles.item} key={index} >
-                                <a href={item.link} key={index}>
+                                <Link href={item.link} key={index}>
                                     <div className={styles.produtoImg} >
-                                        <img src={item.img} alt="" />
+                                        <Image src={item.img} alt="" />
                                     </div>
                                     <div className={styles.categoriaName}>
                                         <div>{item.name}</div>
                                     </div>
-                                </a>
+                                </Link>
                             </div>
                         ))}
                     </div>

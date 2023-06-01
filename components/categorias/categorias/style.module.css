@@ -1,7 +1,7 @@
 .categorias {
     margin: 10px;
     width: 220px;
-    height: 800px;
+    min-height: 200px;
     display: flex;
     flex-direction: column;
     color: rgb(0, 0, 114);

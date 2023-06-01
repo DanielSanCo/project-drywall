@@ -65,25 +65,25 @@ const Navbar = () => {
                 </div>
 
                 <div className={styles.verticalLine}></div>
-                <a href='/'>
+                <Link href='/'>
                     <div className={styles.logo}>
-                        <img src="/images/logo/logo.png" alt="" />
+                        <Image src="/images/logo/logo.png" alt="" />
                         <div className={styles.logoName}>
                             <div>Doutor Drywall<span> e Materiais</span></div>
                             <div className={styles.cellNumber}>3556-2929 / 3556-2019</div>
 
                         </div>
                     </div>
-                </a>
+                </Link>
 
                 <div className={styles.verticalLine}></div>
 
                 <div className={styles.socialArea}>
                     <div className={styles.socialItens}>
                         {socialList.map((item, index) => (
-                            <a href={item.link} key={index} target='_blank'>
-                                <img src={item.img} alt={item.name} />
-                            </a>
+                            <Link href={item.link} key={index} target='_blank'>
+                                <Image src={item.img} alt={item.name} />
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -94,9 +94,9 @@ const Navbar = () => {
                     {topCategorias.map((item, index) => (
                         <>
                             <li key={index} onMouseMove={() => { setDisplay('flex'), setId(index) }} onMouseOut={() => setDisplay('none')}>
-                                <a href={item.link}>
+                                <Link href={item.link}>
                                     {item.name}
-                                </a>
+                                </Link>
                                 {id >= 0 && index === id ?
                                     <ul className={styles.ul} style={{ display: display }}>
                                         {subCate.map((item, index) => (
@@ -104,11 +104,11 @@ const Navbar = () => {
                                                 {
                                                     item.topCategoria == topCategorias[id].name ?
                                                         <>
-                                                            <a href={item.link}>
+                                                            <Link href={item.link}>
                                                                 <li>
                                                                     <div style={{ fontWeight: 'bold' }}>{item.name}</div>
                                                                 </li>
-                                                            </a>
+                                                            </Link>
                                                         </>
                                                         :
                                                         ''
@@ -124,15 +124,15 @@ const Navbar = () => {
                         </>
                     ))}
                     <div className={styles.line}></div>
-                    <a href='/contato'><li>Contato</li></a>
-                    <a href='/sobre'><li>Sobre Nós</li></a>
+                    <Link href='/contato'><li>Contato</li></Link>
+                    <Link href='/sobre'><li>Sobre Nós</li></Link>
                 </ul>
             </div>
 
             <div className={styles.navlist} style={{ transform: active }}>
                 {navList.map((item, index) => (
                     <div key={index} onClick={() => (showResponseMenu2(), changeAnimModule())} >
-                        <a href={item.link} >{item.name}</a>
+                        <Link href={item.link} >{item.name}</Link>
                     </div>
                 ))}
             </div>

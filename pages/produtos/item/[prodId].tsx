@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './style.module.css';
 import { useEffect, useState } from 'react';
-/*import produtos from '@/utils/produtos';*/
 import Head from 'next/head';
 import categoria from '@/utils/categoria';
 import { useRouter } from 'next/router';
@@ -60,11 +59,11 @@ const Produtos = () => {
                     {index == prodId ?
                         <>
                             <div className={styles.road}>
-                                <div>produtos/item/{itens[prodId].name}</div>
+                                <div><span><Link href="/produtos" style={{color: 'blue'}}>produtos</Link>/item/{itens[prodId].name}</span></div>
                             </div>
                             <div className={styles.item}>
                                 <div className={styles.prodImg}>
-                                    <img src={itens[prodId].img} alt="" />
+                                    <Image src={itens[prodId].img} alt={`${itens[prodId].name}`} />
                                 </div>
                                 <div className={styles.prodInfo}>
                                     <div className={styles.prodInfo1}>
@@ -79,12 +78,12 @@ const Produtos = () => {
                                     <div className={styles.zapInfo}>
                                         As compras de nossos produtos são negociadas via Whatsapp, não vendemos diretamente pelo site.
                                     </div>
-                                    <a target="_blank" href={`https://web.whatsapp.com/send?phone=552135562929&text=doutordrywall.com/produtos/item/${index}`}>
+                                    <Link target="_blank" href={`https://web.whatsapp.com/send?phone=552135562929&text=doutordrywall.com/produtos/item/${index}`}>
                                         <div className={styles.zapButton}>
                                             CLIQUE PARA PEDIR
-                                            <img src="/images/social/whatsapp.png" alt="" />
+                                            <Image src="/images/social/whatsapp.png" alt="" />
                                         </div>
-                                    </a>
+                                    </Link>
                                     <div className={styles.entrega}>
                                         Entregamos e combinamos a entrega de seus produtos
                                     </div>
@@ -93,7 +92,7 @@ const Produtos = () => {
                                         <div className={styles.itens}>
                                             {pagamento.map((item, index) => (
                                                 <div>
-                                                    <img src={item.img} alt="" />
+                                                    <Image src={item.img} alt="" />
                                                 </div>
                                             ))}
                                         </div>

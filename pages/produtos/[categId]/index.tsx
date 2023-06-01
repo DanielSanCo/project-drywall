@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './style.module.css';
 import { useState, useRef, useEffect } from 'react';
-/*import produtos from '@/utils/produtos';*/
 import Head from 'next/head';
 import categoria from '@/utils/categoria';
 import { useRouter } from 'next/router';
@@ -60,10 +59,10 @@ const Produtos = () => {
                 <link rel="icon" href="/favicon.png" />
             </Head>
             <div className={styles.titulo}>
-                <h1>Categoria ID</h1>
+                <h1>Categoria {cateId}</h1>
                 <h3>Conheça nossa diversidade de produtos de {cateId}</h3>
             </div>
-            <div className={styles.caminho}><a href='/'>Home</a> > <a href='/produtos'>Produtos</a> > {cateId}</div>
+            <div className={styles.caminho}><Link href='/'>Home</Link> > <Link href='/produtos'>Produtos</Link> > {cateId}</div>
             <div className={styles.produtosSection}>
                 <Categorias cateId={cateId} />
                 <div className={styles.produtosArea}>
@@ -78,17 +77,17 @@ const Produtos = () => {
 
                                     <div className={styles.item} key={index} onMouseMove={() => { setDisplay('flex'), setId(index) }} onMouseOut={() => setDisplay('none')}>
 
-                                        <a href={`/produtos/item/${index}`}>
+                                        <Link href={`/produtos/item/${index}`}>
                                             <div className={styles.marcaImg}>
                                                 {item.marca}
                                             </div>
                                             {itens.length < 0 ?
                                                 <div>
-                                                    <img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="" />
+                                                    <Image src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="" />
                                                 </div>
                                                 :
                                                 <div className={styles.produtoImg}>
-                                                    <img src={item.img} alt="" />
+                                                    <Image src={item.img} alt="" />
                                                 </div>
                                             }
                                             <div className={styles.produtoName}>
@@ -100,14 +99,14 @@ const Produtos = () => {
                                                 :
                                                 <div style={{ color: 'red', margin: '5px' }}>{item.dispo}</div>
                                             }
-                                        </a>
+                                        </Link>
                                         <div className={styles.contatoArea}>
-                                            <a target="_blank" href={`https://web.whatsapp.com/send?phone=552135562929&text=doutordrywall.com/produtos/item/${index}`}>
+                                            <Link target="_blank" href={`https://web.whatsapp.com/send?phone=552135562929&text=doutordrywall.com/produtos/item/${index}`}>
                                                 <div className={styles.zap}>
                                                     <div>Entrar em Contato</div>
-                                                    <img src="/images/social/whatsapp.png" alt="" />
+                                                    <Image src="/images/social/whatsapp.png" alt="" />
                                                 </div>
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
                                     : ''}

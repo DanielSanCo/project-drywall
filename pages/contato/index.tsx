@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styles from './style.module.css'
 import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const Contato = () => {
     const [email, setEmail] = useState('')
@@ -35,7 +37,7 @@ const Contato = () => {
                     <div className={styles.infoContato}>
                         <div className={styles.eachInfo}>
                             <div>
-                                <img src="/images/favCons/local.png" alt="" />
+                                <Image src="/images/favCons/local.png" alt="" />
                                 <span style={{ fontWeight: 'bold' }}>Est. dos Bandeirantes</span>
                             </div>
                             <div></div>
@@ -43,14 +45,14 @@ const Contato = () => {
                         </div>
                         <div className={styles.eachInfo}>
                             <div>
-                                <img src="/images/favCons/email.png" alt="" />
+                                <Image src="/images/favCons/email.png" alt="" />
                                 <span style={{ fontWeight: 'bold' }}>E-mail</span>
                                 <span>drmateriaisedrywall@gmail.com</span>
                             </div>
                         </div>
                         <div className={styles.eachInfo}>
                             <div>
-                                <img src="/images/favCons/phone-call.png" alt="" />
+                                <Image src="/images/favCons/phone-call.png" alt="" />
                                 <span style={{ fontWeight: 'bold' }}>Telefone</span>
                                 <span>+213556-2929</span>
                             </div>
@@ -62,35 +64,35 @@ const Contato = () => {
                     <div className={styles.inputs}>
                         <div className={styles.nome}>
                             <div>
-                                <img src="/images/favCons/italian.png" alt="" />
+                                <Image src="/images/favCons/italian.png" alt="" />
                             </div>
                             <input type="text" placeholder='Nome' />
                         </div>
                         <div className={styles.nome}>
                             <div>
-                                <img src="/images/favCons/mail.png" alt="" />
+                                <Image src="/images/favCons/mail.png" alt="" />
                             </div>
                             <input type="text" placeholder='E-mail' value={email} onChange={() => changeEmail} />
                         </div>
                         <div className={styles.nome}>
                             <div>
-                                <img src="/images/favCons/mail.png" alt="" />
+                                <Image src="/images/favCons/mail.png" alt="" />
                             </div>
                             <input type="text" placeholder='Assunto' value={assunto} onChange={() => changeAssunto} />
                         </div>
                         <div className={styles.nome}>
                             <div>
-                                <img src="/images/favCons/home.png" alt="" />
+                                <Image src="/images/favCons/home.png" alt="" />
                             </div>
                             <textarea placeholder='Texto' value={texto} onChange={() => changeText}/>
                         </div>
                         <div style={{ display: 'flex' }}>
-                            <a href={`mailto:drmateriaisedrywall@gmail.com?subject=${assunto}&cc=${email}&body=${texto}`}>
+                            <Link href={`mailto:drmateriaisedrywall@gmail.com?subject=${assunto}&cc=${email}&body=${texto}`}>
                                 <div className={styles.button}>Enviar</div>
-                            </a>
-                            <a target="_blank" href={`https://web.whatsapp.com/send?phone=552135562929&text=${texto}`}>
+                            </Link>
+                            <Link target="_blank" href={`https://web.whatsapp.com/send?phone=552135562929&text=${texto}`}>
                                 <div className={styles.button} style={{ backgroundColor: 'green' }}>Whatsapp</div>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

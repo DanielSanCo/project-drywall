@@ -23,17 +23,17 @@ const Parceiros = () => {
             </div>
             <div className={styles.geralArea}>
                 <div className={styles.arrow} onClick={() => handleLeftClick()}>
-                    <img src="/images/favCons/favArrow.png" alt="" />
+                    <Image src="/images/favCons/favArrow.png" alt="" />
                 </div>
                 <div className={styles.parceirosArea} ref={carousel}>
                     {parceiros.map((item, index) => (
                         <div key={index}>
-                            <a href={item.link}><img src={item.img} alt="" /></a>
+                            <Link href={item.link}><Image src={item.img} alt="" /></Link>
                         </div>
                     ))}
                 </div>
                 <div className={styles.arrow} onClick={() => handleRightClick()}>
-                    <img src="/images/favCons/favArrowR.png" alt="" />
+                    <Image src="/images/favCons/favArrowR.png" alt="" />
                 </div>
             </div>
         </div>

@@ -184,6 +184,7 @@
     .nav {
         height: 20vh;
         position: fixed;
+        box-shadow: 1px 1px 8px black;
     }
     .nav .test {
         min-height: 100%;

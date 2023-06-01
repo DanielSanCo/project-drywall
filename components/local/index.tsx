@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import styles from './style.module.css';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const Local = () => {
     const [assunto, setAssunto] = useState('')
@@ -29,32 +31,32 @@ const Local = () => {
                     <h1>Entrar em Contato</h1>
                     <div className={styles.nome}>
                         <div>
-                            <img src="/images/favCons/italian.png" alt="" />
+                            <Image src="/images/favCons/italian.png" alt="" />
                         </div>
                         <input type="text" placeholder='Nome' />
                     </div>
                     <div className={styles.nome}>
                         <div>
-                            <img src="/images/favCons/mail.png" alt="" />
+                            <Image src="/images/favCons/mail.png" alt="" />
                         </div>
                         <input type="text" placeholder='E-mail' value={email} onChange={() => changeEmail} />
                     </div>
                     <div className={styles.nome}>
                         <div>
-                            <img src="/images/favCons/home.png" alt="" />
+                            <Image src="/images/favCons/home.png" alt="" />
                         </div>
                         <input type="text" placeholder='Assunto' value={assunto} onChange={() => changeAssunto} />
                     </div>
                     <div className={styles.nome}>
                         <div>
-                            <img src="/images/favCons/home.png" alt="" />
+                            <Image src="/images/favCons/home.png" alt="" />
                         </div>
                         <input type="text" placeholder='Texto' value={texto} onChange={() => changeText} />
                     </div>
                     <div style={{ display: 'flex' }}>
-                        <a href={`mailto:drmateriaisedrywall@gmail.com?subject=${assunto}&cc=${email}&body=${texto}`}>
+                        <Link href={`mailto:drmateriaisedrywall@gmail.com?subject=${assunto}&cc=${email}&body=${texto}`}>
                             <div className={styles.button}>Enviar</div>
-                        </a>
+                        </Link>
                         <div className={styles.button} style={{ backgroundColor: 'green' }}>Whatsapp</div>
                     </div>
 

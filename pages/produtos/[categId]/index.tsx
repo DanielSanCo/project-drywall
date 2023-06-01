@@ -32,9 +32,6 @@ const Produtos = () => {
         setItens(json);
     }
 
-    useEffect(() => {
-        loadItens()
-    }, [])
 
     const cateId = router.query.categId
 
@@ -46,7 +43,8 @@ const Produtos = () => {
     }
 
     useEffect(() => {
-        qtdItens
+        loadItens()
+        qtdItens()
     }, [])
 
     return (

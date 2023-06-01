@@ -47,7 +47,6 @@ const Produtos = () => {
     }
 
     useEffect(() => {
-        console.log(pagina.current?.scrollHeight, pagina.current?.offsetHeight)
         qtdItens()
 
     }, [])

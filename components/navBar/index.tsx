@@ -42,7 +42,7 @@ const Navbar = () => {
     }
 
     const showResponseMenu2 = () => {
-        active === 'translateX(0)' ? setActive('translateX(100%)') : setActive('translateX(0)');
+        active === 'translateX(0)' ? setActive('translateX(-100%)') : setActive('translateX(0)');
     }
 
     return (

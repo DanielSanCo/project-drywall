@@ -5,7 +5,7 @@ import { useRef } from 'react';
 import marca from '@/utils/marcas';
 
 const Parceiros = () => {
-    const carousel = useRef(document.createElement("div"))
+    const carousel = useRef(null)
 
     const handleLeftClick = () => {
         carousel.current.scrollLeft -= carousel.current.offsetWidth;

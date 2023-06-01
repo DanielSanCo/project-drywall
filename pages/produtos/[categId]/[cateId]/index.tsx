@@ -63,7 +63,7 @@ const Produtos = () => {
                 <h1>PRODUTOS</h1>
                 <h3>Conheça nossa diversidade de produtos de {cateId2}</h3>
             </div>
-            <div className={styles.caminho}><Link href='/'>Home</Link> > <Link href='/produtos'>Produtos</Link> > {cateId} > {cateId2}</div>
+            <div className={styles.caminho}><Link href='/'>Home</Link> &gt; <Link href='/produtos'>Produtos</Link> &gt; {cateId} &gt; {cateId2}</div>
             <div className={styles.produtosSection}>
                 <Categorias cateId={cateId} />
                 <div className={styles.produtosArea}>

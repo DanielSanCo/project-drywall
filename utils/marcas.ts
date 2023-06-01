@@ -1,4 +1,4 @@
-const parceiros = [
+const marca = [
     { name: 'Amanco', img: '/images/parceiros/amanco.png', link: '/produtos/Amanco' },
     { name: 'Perfil-Lider', img: '/images/parceiros/perfilLider.jpg', link: '/produtos/Perfil-Lider' },
     { name: 'Coral', img: '/images/parceiros/coral.jpg', link: '/produtos/Coral' },
@@ -10,4 +10,4 @@ const parceiros = [
     { name: 'Delta Plus', img: '/images/parceiros/deltaPlus.png', link: '/produtos/Delta Plus' }
 ]
 
-export default parceiros;
+export default marca;

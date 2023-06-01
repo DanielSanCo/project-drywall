@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './style.module.css';
 import { useRef } from 'react';
-import parceiros from '@/utils/marcas';
+import marca from '@/utils/marcas';
 
 const Parceiros = () => {
     const carousel = useRef(document.createElement("div"))
@@ -26,7 +26,7 @@ const Parceiros = () => {
                     <Image src="/images/favCons/favArrow.png" alt="" />
                 </div>
                 <div className={styles.parceirosArea} ref={carousel}>
-                    {parceiros.map((item, index) => (
+                    {marca.map((item, index) => (
                         <div key={index}>
                             <Link href={item.link}><Image src={item.img} alt="" /></Link>
                         </div>

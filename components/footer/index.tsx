@@ -47,7 +47,7 @@ const Footer = () => {
             </div>
             <div className={styles.parceiros}>
                 {parceiros.map((item, index) => (
-                    <Link href={item.link}>
+                    <Link href={item.link} key={index}>
                         <div className={styles.item}>
                             <Image src={item.img} alt="" key={index} />
                         </div>

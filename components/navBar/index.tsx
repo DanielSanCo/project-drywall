@@ -53,7 +53,7 @@ const Navbar = () => {
                     <div>PARCERIAS</div>
                     <div className={styles.parceirosList}>
                         {parceiros.map((item, index) => (
-                            <div key={index}><img src={item.img} alt="" /></div>
+                            <div key={index}><Image src={item.img} alt="" /></div>
                         ))}
                     </div>
                 </div>

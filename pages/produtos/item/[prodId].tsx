@@ -58,7 +58,7 @@ const Produtos = () => {
                 <>
                     {index == prodId ?
                         <>
-                            <div className={styles.road}>
+                            <div className={styles.road} key={index}>
                                 <div><span><Link href="/produtos" style={{color: 'blue'}}>produtos</Link>/item/{itens[prodId].name}</span></div>
                             </div>
                             <div className={styles.item}>
@@ -91,7 +91,7 @@ const Produtos = () => {
                                         <div>FORMAS DE PAGAMENTO</div>
                                         <div className={styles.itens}>
                                             {pagamento.map((item, index) => (
-                                                <div>
+                                                <div key={index}>
                                                     <Image src={item.img} alt="" />
                                                 </div>
                                             ))}

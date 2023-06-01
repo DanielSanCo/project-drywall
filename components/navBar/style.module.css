@@ -182,7 +182,7 @@
 
 @media (max-width: 900px) {
     .nav {
-        height: 20vh;
+        height: 15vh;
         position: fixed;
         box-shadow: 1px 1px 8px black;
     }

@@ -44,7 +44,7 @@ const Produtos = () => {
 
     useEffect(() => {
         loadItens()
-        qtdItens()
+        //qtdItens()
     }, [])
 
     return (

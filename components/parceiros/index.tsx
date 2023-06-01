@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './style.module.css';
-import { useRef } from 'react';
+import { MutableRefObject, useRef } from 'react';
 import marca from '@/utils/marcas';
 
 const Parceiros = () => {
-    const carousel = useRef(null)
+    const carousel = useRef() as MutableRefObject<HTMLDivElement>;
 
     const handleLeftClick = () => {
         carousel.current.scrollLeft -= carousel.current.offsetWidth;

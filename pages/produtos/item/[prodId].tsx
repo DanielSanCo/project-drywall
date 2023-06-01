@@ -78,7 +78,7 @@ const Produtos = () => {
                                     <div className={styles.zapInfo}>
                                         As compras de nossos produtos são negociadas via Whatsapp, não vendemos diretamente pelo site.
                                     </div>
-                                    <Link target="_blank" href={`https://web.whatsapp.com/send?phone=552135562929&text=doutordrywall.com/produtos/item/${index}`}>
+                                    <Link target="_blank" href={`https://api.whatsapp.com/send?phone=552135562929&text=doutordrywall.com/produtos/item/${index}`}>
                                         <div className={styles.zapButton}>
                                             CLIQUE PARA PEDIR
                                             <Image src="/images/social/whatsapp.png" alt="" />

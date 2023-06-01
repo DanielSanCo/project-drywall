@@ -99,7 +99,7 @@ const Produtos = () => {
                                             }
                                             </Link>
                                         <div className={styles.contatoArea}>
-                                                <Link target="_blank" href={`https://web.whatsapp.com/send?phone=552135562929&text=doutordrywall.com/produtos/item/${index}`}>
+                                                <Link target="_blank" href={`https://api.whatsapp.com/send?phone=552135562929&text=doutordrywall.com/produtos/item/${index}`}>
                                                     <div className={styles.zap}>
                                                         <div>Entrar em Contato</div>
                                                         <Image src="/images/social/whatsapp.png" alt="" />

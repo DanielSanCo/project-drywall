@@ -22,7 +22,7 @@ const Produtos = () => {
     const [id, setId] = useState(0)
     const router = useRouter()
     const [qtd, setQtd] = useState<number>(0)
-    const pagina = useRef()
+    const pagina = useRef(null)
     const [itens, setItens] = useState<Produto[]>([])
 
     const loadItens = async () => {
@@ -46,7 +46,6 @@ const Produtos = () => {
     }
 
     useEffect(() => {
-        console.log(pagina.current?.scrollHeight, pagina.current?.offsetHeight)
         qtdItens()
 
     }, [])

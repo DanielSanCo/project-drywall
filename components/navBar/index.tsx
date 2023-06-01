@@ -13,7 +13,7 @@ const navList = [
     { name: 'Sobre nós', img: '', link: '/sobre' }
 ]
 const socialList = [
-    { name: 'Whatsapp', img: '/images/social/whatsapp.png', link: 'https://web.whatsapp.com/send?phone=552135562929' },
+    { name: 'Whatsapp', img: '/images/social/whatsapp.png', link: 'https://api.whatsapp.com/send?phone=552135562929' },
     { name: 'Instagram', img: '/images/social/insta.png', link: 'https://www.instagram.com/' },
 ]
 

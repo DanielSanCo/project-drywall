@@ -23,7 +23,9 @@ const Carousel = () => {
             >
                 {carrosel.map((item, index) => (
                     <SwiperSlide key={index}>
-                        <Link href='/produtos'><Image src={item.img} alt="" /></Link>
+                        <Link href='/produtos'>
+                            <Image src={item.img} alt="" />
+                        </Link>
                     </SwiperSlide>
                 ))}
             </Swiper>

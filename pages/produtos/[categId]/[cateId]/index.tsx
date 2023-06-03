@@ -91,20 +91,21 @@ const Produtos = () => {
                                             <div className={styles.produtoName}>
                                                 <div>{item.name}</div>
                                             </div>
-                                            
+
                                             {item.dispo === 'Disponivel' ?
                                                 <div style={{ color: 'green', margin: '5px' }}>{item.dispo}</div>
                                                 :
                                                 <div style={{ color: 'red', margin: '5px' }}>{item.dispo}</div>
                                             }
-                                            </Link>
+                                        </Link>
                                         <div className={styles.contatoArea}>
-                                                <Link target="_blank" href={`https://api.whatsapp.com/send?phone=552135562929&text=doutordrywall.com/produtos/item/${index}`}>
-                                                    <div className={styles.zap}>
-                                                        <div>Entrar em Contato</div>
-                                                        <Image src="/images/social/whatsapp.png" alt="" />
-                                                    </div>
-                                                </Link>
+
+                                            <Link target="_blank" href={`https://api.whatsapp.com/send?phone=552135562929&text=Olá gostaria de saber o preço do produto: doutordrywall.com/produtos/item/${index}`}>
+                                                <div className={styles.zap}>
+                                                    <div>Entrar em Contato</div>
+                                                    <Image src="/images/social/whatsapp.png" alt="" />
+                                                </div>
+                                            </Link>
                                         </div>
                                     </div>
                                     : ''

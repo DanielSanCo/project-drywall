@@ -34,7 +34,7 @@ const Produtos = () => {
                             <div className={styles.item} key={index} >
                                 <Link href={item.link} key={index}>
                                     <div className={styles.produtoImg} >
-                                        <Image src={item.img} alt="" />
+                                        <Image src={item.img} alt="" width={200} height={200} />
                                     </div>
                                     <div className={styles.categoriaName}>
                                         <div>{item.name}</div>

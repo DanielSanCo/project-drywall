@@ -49,7 +49,7 @@ const categoria = [
     { name: 'Tintas Epóxi', categoria: 'Tintas e Acessórios', subCategoria: 'Tintas', link: '/produtos/Tintas/Tintas Epóxi', img: '/images/drywall.jpg' },
     { name: 'Tintas Spray', categoria: 'Tintas e Acessórios', subCategoria: 'Tintas', link: '/produtos/Tintas/Tintas Spray', img: '/images/drywall.jpg' },
     { name: 'Tintas para Parede Interna', categoria: 'Tintas e Acessórios', subCategoria: 'Tintas', link: '/produtos/Tintas/Tintas para Parede Interna', img: '/images/drywall.jpg' },
-    { name: 'Tintas Esmate a Base de Água', categoria: 'Tintas e Acessórios', subCategoria: 'Tintas', link: '/produtos/Tintas/Tintas Esmate a Base de Água', img: '/images/drywall.jpg' },
+    { name: 'Tintas Esmalte a Base de Água', categoria: 'Tintas e Acessórios', subCategoria: 'Tintas', link: '/produtos/Tintas/Tintas Esmate a Base de Água', img: '/images/drywall.jpg' },
 
     { name: "Lixa D'água", categoria: 'Tintas e Acessórios', subCategoria: 'Abrasivos', link: "/produtos/Abrasivos/Lixa D'água", img: '/images/drywall.jpg' },
     { name: "Lixas de Ferro", categoria: 'Tintas e Acessórios', subCategoria: 'Abrasivos', link: "/produtos/Abrasivos/Lixas de Ferro", img: '/images/drywall.jpg' },

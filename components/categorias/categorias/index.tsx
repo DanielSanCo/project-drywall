@@ -17,7 +17,7 @@ const Categorias = ({ cateId }: Props) => {
         <div className={styles.categorias}>
             <h3>CATEGORIA</h3>
             <div>
-                <h4><Link href={subCate[0].link}>{cateId}</Link></h4>
+                <h4>{cateId}</h4>
                 {categoria.map((item, index) => (
                     <>
                         {item.subCategoria == cateId ?
